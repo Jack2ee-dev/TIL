@@ -4,6 +4,7 @@
 > - created at 20210422
 
 ## 1. Document Object Model(DOM)
+
 브라우저가 HTML 코드를 읽을 때, 브라우저는 [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node) 라 불리는 JS 객체를 생성한다.
 결국, 모든 HTML 요소는 JS 객체로 변환된다.
 
@@ -24,8 +25,8 @@ HTML 요소를 발견할 때마다 DOM tree는 각각의 클래스(생성자 함
 JS는 DOM이 무엇인지 이해하지 못한다. DOM을 이해하는 것은 JS의 역할이 아니다.
 DOM은 웹 페이지를 효율적으로 렌더링하고 다양한 목적에 맞게 DOM 요소를 개발자가 역동적으로 조작하기 수월하게 하고자 브라우저가 제공하는 high-level의 Web API다.
 
-
 ## 2. CSS Object Model(CSSOM)
+
 DOM을 구성하고 난 후, 브라우저는 모든 소스로부터 CSS를 읽어오고 CSSOM을 구성한다.
 CSSOM은 DOM과 같이 tree 구조의 **CSS Object Model** 을 의미한다.
 
@@ -33,7 +34,7 @@ CSSOM은 DOM과 같이 tree 구조의 **CSS Object Model** 을 의미한다.
 그러나 CSSOM은 `<meta>`, `<script>`, `<title>`과 같이 스크린에 표현되지 않는 DOM 요소를 포함하지는 않는다.
 
 대부분의 브라우저들은 **user agent stylesheet**라 불리는 각각의 스타일시트를 적용하고 개발자가 적용한 property들로 구성된 CSS 스타일을
-기존 user agent style에 overriding 하여(*스타일 적용의 명시성 원칙*) 최종 DOM 요소의 CSS property를 계산하고 노드를 구성한다.
+기존 user agent style에 overriding 하여(_스타일 적용의 명시성 원칙_) 최종 DOM 요소의 CSS property를 계산하고 노드를 구성한다.
 
 특정 HTML 요소에 대해 `display`같은 CSS property가 정의되지 않았더라도, 그 값은 [W3C CSS](https://www.w3.org/Style/CSS/) 표준에 의해 특정 기본 값으로 설정된다.
 CSS property의 기본값을 선정하는 동안, [W3C documentation](https://www.w3.org/TR/CSS1/#inheritance) **상송**의 몇 가지 룰이 적용된다.
@@ -51,6 +52,7 @@ CSS property의 기본값을 선정하는 동안, [W3C documentation](https://ww
 빨간 색으로 표시된 CSS 속성 값은 속성 값이 상속된 값을 `gray`로 overriding 하기 전까지 위에서부터 상속받는다.
 
 ## 3. Render Tree
+
 Render-Tree는 DOM tree와 CSSOM tree를 결함하여 구조화된 tree 구조다.
 브라우저는 각각 눈에 보이는 요소의 **layout**을 계산하고 그것을 화면에 **paint** 해야 한다. 이를 위해 브라우저는 Render-Tree를 이용한다.
 그러므로, Render-Tree가 구성되지 않으면, 아무것도 화면에 표현되지 않기 때문에 DOM과 CSSOM을 구성하는 이유다.
@@ -69,4 +71,5 @@ DOM API가 브라우저에 의해 구성된 DOM tree 상에 DOM 요소에 접근
 그러나 브라우저가 Render Tree를 구성하기 휘애 DOM과 CSSOM을 결합하였기 때문에, DOM API에 제공된 CSSOM을 노출시켜 사용자는 CSSOM 노드의 CSS property에 접근하고 수정할 수 있다.
 
 ## References
-- [How the browser renders a web page? - DOM, CSSOM, and Rendering](https://medium.com/jspoint/how-the-browser-renders-a-web-page-dom-cssom-and-rendering-df10531c9969) by *Uday Hiwarale*
+
+- [How the browser renders a web page? - DOM, CSSOM, and Rendering](https://medium.com/jspoint/how-the-browser-renders-a-web-page-dom-cssom-and-rendering-df10531c9969) by _Uday Hiwarale_
