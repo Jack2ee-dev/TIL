@@ -17,7 +17,7 @@ HTML document 로부터 노드들을 생성한 후, 브라우저는 노드 객�
 HTML 요소들은 서로 중첩되어 있기에, 브라우저는 전에 생성한 노드 객체를 이용하여 요소를 재생산한다.
 이는 브라우저가 전 라이프사이클에서 효율적으로 웹 사이트를 렌더링하고 관리할 수 있도록 도와준다.
 
-![DOM Tree](./images/DOM-Tree.png)
+![DOM Tree](assets/DOM-Tree.png)
 
 HTML document를 위한 DOM tree는 위에서 보는 바와 같다.
 DOM tree는 가장 위에 있는 `html`에서 시작하여 아래로 내려온다.
@@ -47,7 +47,7 @@ CSS property의 기본값을 선정하는 동안, [W3C documentation](https://ww
 아래의 다이어그램을 이용하여 CSSOM tree를 시각화할 수 있다.
 간단한 설명을 위해 user-agent styles을 무시하였다.
 
-![CSSOM Tree](./images/CSSOM-Tree.png)
+![CSSOM Tree](assets/CSSOM-Tree.png)
 
 위의 다이어그램을 통해 알 수 있듯이, CSSOM tree는 `<link>`, `<title>`, `<script>` 등 스크린에 표현되지 않는 요소는 포함하지 않는다.
 빨간 색으로 표시된 CSS 속성 값은 속성 값이 상속된 값을 `gray`로 overriding 하기 전까지 위에서부터 상속받는다.
@@ -61,7 +61,7 @@ Render-Tree는 DOM tree와 CSSOM tree를 결함하여 구조화된 tree 구조�
 Render-Tree는 화면에 표현된 것들의 low-level의 표현방식이고 어떤 픽샐도 갖지 않는 노드는 포함하지 않는다.
 예를 들어, `display: none;`이 부여된 요소는 `0px(width) * 0px(width)`의 차원을 가지므로, Render-Tree에는 포함되지 않는다.
 
-![Render_Tree](./images/Render-Tree.png)
+![Render_Tree](assets/Render-Tree.png)
 
 위의 다이어그램에서 볼 수 있듯이, Render-Tree는 DOM과 CSSOM을 결합한 트리 구조를 생성하며 화면에 표현된 요소들만을 포함한다.
 
