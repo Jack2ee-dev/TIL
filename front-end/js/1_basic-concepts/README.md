@@ -1,4 +1,4 @@
-# About javascript
+# Basic concepts
 
 > created at 210510
 
