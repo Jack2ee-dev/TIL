@@ -114,3 +114,5 @@ fabric.properties
 .idea/codestream.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm,vscode
+
+front-end/js/playground/node_modules
