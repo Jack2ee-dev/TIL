@@ -29,7 +29,7 @@ const predicates = { increase, decrease };
 // 3. 함수의 매개변수에게 전달할 수 있다.
 // 4. 함수의 반환값으로 사용할 수 있다.
 function makeCounter(predicate) {
-  let num = 0;
+  let num = 0; // 자유 변수
 
   return function () {
     num = predicate(num);
